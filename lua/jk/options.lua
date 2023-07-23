@@ -2,8 +2,10 @@
 -- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
+
 vim.opt.relativenumber = true -- relative line numbers
 lvim.format_on_save = true
+lvim.builtin.project.manual_mode = true
 vim.opt.mouse = ""
 vim.opt.mouse = "a"
 -- lvim.transparent_window = true
@@ -45,23 +47,23 @@ lvim.plugins = {
       })
     end
   },
-  {
-    'wfxr/minimap.vim',
-    build = "cargo install --locked code-minimap",
-    -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
-    config = function()
-      vim.cmd("let g:minimap_width = 10")
-      vim.cmd("let g:minimap_auto_start = 1")
-      vim.cmd("let g:minimap_auto_start_win_enter = 1")
-    end,
-  },
-  {
-    "windwp/nvim-spectre",
-    event = "BufRead",
-    config = function()
-      require("spectre").setup()
-    end,
-  },
+  -- {
+  --   'wfxr/minimap.vim',
+  --   build = "cargo install --locked code-minimap",
+  --   -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
+  --   config = function()
+  --     vim.cmd("let g:minimap_width = 10")
+  --     vim.cmd("let g:minimap_auto_start = 1")
+  --     vim.cmd("let g:minimap_auto_start_win_enter = 1")
+  --   end,
+  -- },
+  -- {
+  --   "windwp/nvim-spectre",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("spectre").setup()
+  --   end,
+  -- },
   {
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -86,14 +88,14 @@ lvim.plugins = {
       })
     end
   },
-  {
-    'Wansmer/treesj',
-    keys = { '<space>m', '<space>j', '<space>s' },
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = function()
-      require('treesj').setup({ --[[ your config ]] })
-    end,
-  },
+  -- {
+  --   'Wansmer/treesj',
+  --   keys = { '<space>m', '<space>j', '<space>s' },
+  --   dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  --   config = function()
+  --     require('treesj').setup({ --[[ your config ]] })
+  --   end,
+  -- },
   {
     "sainnhe/sonokai"
   },
@@ -112,11 +114,9 @@ lvim.plugins = {
   {
     "mofiqul/vscode.nvim"
   },
-  {
-    "sainnhe/gruvbox-material"
-
-  },
-
+  -- {
+  --   "sainnhe/gruvbox-material"
+  -- },
   {
     "rebelot/kanagawa.nvim"
   },
@@ -137,6 +137,5 @@ lvim.plugins = {
 }
 
 
-lvim.builtin.project.manual_mode = true
 
 -- require("luasnip/loaders/from_vscode").lazy_load()
