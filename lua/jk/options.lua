@@ -8,12 +8,8 @@ lvim.format_on_save = true
 lvim.builtin.project.manual_mode = true
 vim.opt.mouse = ""
 vim.opt.mouse = "a"
+lvim.builtin.lualine.style = "default" -- or "none"
 -- lvim.transparent_window = true
-
--- keyboard remaps
--- local k_opts = { noremap = true, silent = true }
--- local keymap = vim.api.nvim_set_keymap
-
 
 -- close all buffers
 lvim.keys.normal_mode["<Leader>bca"] = ':%bd!|e #|bd #|normal`"<CR>'
