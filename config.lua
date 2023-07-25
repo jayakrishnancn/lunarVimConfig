@@ -8,7 +8,23 @@ require("jk.options")
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "eslint", filetypes = { "typescript", "typescriptreact" } }
+
+  {
+    command = "eslint", filetypes = { "typescript", "typescriptreact" },
+
+  }
 }
 
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+
+  {
+    command = "eslint", filetypes = { "typescript", "typescriptreact" },
+
+  }
+}
+
+
 lvim.builtin.nvimtree.setup.filters.dotfiles = true
+
+vim.keymap.set('n', 'la', vim.lsp.buf.code_action)

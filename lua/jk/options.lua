@@ -14,6 +14,8 @@ lvim.builtin.lualine.style = "default" -- or "none"
 -- close all buffers
 lvim.keys.normal_mode["<Leader>bca"] = ':%bd!|e #|bd #|normal`"<CR>'
 
+
+
 -- Color scheme
 lvim.colorscheme = "kanagawa"
 
@@ -24,6 +26,9 @@ vim.api.nvim_set_keymap('n', '<M-Backspace>', 'db', { noremap = true, silent = t
 
 
 lvim.plugins = {
+  {
+    "jose-elias-alvarez/typescript.nvim"
+  },
   {
     "karb94/neoscroll.nvim",
     event = "WinScrolled",
