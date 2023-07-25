@@ -4,3 +4,11 @@
 -- iscord: https://discord.com/invite/Xb9B4Ny
 --
 require("jk.options")
+
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "eslint", filetypes = { "typescript", "typescriptreact" } }
+}
+
+lvim.builtin.nvimtree.setup.filters.dotfiles = true
