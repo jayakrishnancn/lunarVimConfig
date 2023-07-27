@@ -11,7 +11,12 @@ vim.opt.mouse = "a"
 lvim.builtin.lualine.style = "default" -- or "none"
 -- lvim.transparent_window = true
 
+lvim.builtin.nvimtree.setup.filters.dotfiles = true
+
+-- // code action remap
+vim.keymap.set('n', 'la', vim.lsp.buf.code_action)
 -- close all buffers
+--
 lvim.keys.normal_mode["<Leader>bca"] = ':%bd!|e #|bd #|normal`"<CR>'
 
 
@@ -143,3 +148,38 @@ lvim.plugins = {
 --
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  -- {
+  --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+  --   command = "eslint_d",
+  --   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue", "svelte" }
+  --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+  -- },
+  {
+    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "prettier",
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue", "svelte" }
+  },
+}
+
+
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+
+  {
+    command = "eslint", filetypes = { "typescript", "typescriptreact" },
+
+  }
+}
+
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+  {
+    command = "eslint", filetypes = { "typescript", "typescriptreact" },
+
+  }
+}
