@@ -140,3 +140,6 @@ lvim.plugins = {
 
 
 -- require("luasnip/loaders/from_vscode").lazy_load()
+--
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
