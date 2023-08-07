@@ -105,41 +105,6 @@ lvim.plugins = {
       })
     end
   },
-  -- {
-  --   'Wansmer/treesj',
-  --   keys = { '<space>m', '<space>j', '<space>s' },
-  --   dependencies = { 'nvim-treesitter/nvim-treesitter' },
-  --   config = function()
-  --     require('treesj').setup({ --[[ your config ]] })
-  --   end,
-  -- },
-  {
-    "sainnhe/sonokai"
-  },
-  {
-    "catppuccin/nvim"
-  },
-  {
-    "rose-pine/neovim"
-  },
-  {
-    "navarasu/onedark.nvim"
-  },
-  {
-    "alexvzyl/nordic.nvim"
-  },
-  {
-    "mofiqul/vscode.nvim"
-  },
-  -- {
-  --   "sainnhe/gruvbox-material"
-  -- },
-  {
-    "rebelot/kanagawa.nvim"
-  },
-  {
-    "morhetz/gruvbox"
-  },
   {
     "SirVer/ultisnips"
   },
@@ -150,7 +115,67 @@ lvim.plugins = {
   {
     "mfussenegger/nvim-dap"
   },
+  -- {
+  --   'Wansmer/treesj',
+  --   keys = { '<space>m', '<space>j', '<space>s' },
+  --   dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  --   config = function()
+  --     require('treesj').setup({ --[[ your config ]] })
+  --   end,
+  -- },
+  --  -- color schemes
+  -- {
+  --   "sainnhe/sonokai"
+  -- },
+  -- {
+  --   "catppuccin/nvim"
+  -- },
+  -- {
+  --   "rose-pine/neovim"
+  -- },
+  -- {
+  --   "navarasu/onedark.nvim"
+  -- },
+  {
+    "alexvzyl/nordic.nvim"
+  },
+  {
+    "rebelot/kanagawa.nvim"
+  },
 
+  {
+    "xiantang/darcula-dark.nvim"
+  },
+  {
+    "echasnovski/mini.hues"
+  },
+  {
+    "folke/tokyonight.nvim"
+  },
+  {
+    "artanikin/vim-synthwave84"
+  },
+  {
+    "rigellute/shades-of-purple.vim"
+  },
+  {
+    "franbach/miramare"
+  },
+  {
+    "jacoborus/tender.vim"
+  },
+  {
+    "sainnhe/gruvbox-material"
+  },
+  {
+    "junegunn/seoul256.vim"
+  },
+  {
+    "sainnhe/everforest"
+  },
+  {
+    "altercation/vim-colors-solarized"
+  }
 }
 
 
